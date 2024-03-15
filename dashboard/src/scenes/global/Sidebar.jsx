@@ -11,7 +11,7 @@ import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlinedIcon from "@mui/icons-material/PieChartOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
