@@ -1,5 +1,236 @@
+import { useState } from "react";
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
+import "react-pro-sidebar/dist/css/styles.css";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Link } from "react-router-dom";
+import { colors } from "../../theme";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
+import BarChartOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import PieChartOutlinedIcon from "@mui/icons-material/PieChartOutlined";
+import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+
+
+// creating one partent menu item to avoid re-writting the below items
+// name of the route, where it goes to, the icon, state
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const uiColors = colors(theme.palette.mode);
+  return (
+    <MenuItem 
+      active={ selected === title } 
+      style={{ color: uiColors.grey[100]}}
+      onClick={() => setSelected(title)}
+      icon={icon}
+    >
+      <Typography>{title}</Typography>
+      <Link to={to} />
+    </MenuItem>
+  )
+}
+
 const Sidebar = () => {
-  return <div>Sidebar</div>
+  const theme = useTheme();
+  const uiColors = colors(theme.palette.mode);
+  // if the side bar is collapsed or not
+  const [ isCollapsed, setIsCollapsed ] = useState(false);
+  // what page is selected
+  const [ selected, setSelected ] = useState("Dashboard");
+  return (
+    <Box
+      //overriding the default react sidebar styles
+      sx={{
+        "& .pro-sidebar-inner": {
+          background: `${uiColors.primary[400]} !important`
+        },
+        "& .pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "& .pro-inner-item": {
+          padding: "5px 35px 5px 20px !important",
+        },
+        "& .pro-inner-item:hover": {
+          color: "#868DFB !important",
+        },
+        "& .pro-menu-item.active": {
+          color: "#6870FA !important",
+        }
+      }}
+    >
+      <ProSidebar collapsed={isCollapsed}>
+        <Menu iconShape="square">
+          {/* LOGO AND MENU ICON */}
+          <MenuItem
+            onClick={() => setIsCollapsed(!isCollapsed)}
+            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+            style={{
+              margin: "10px 0 20px 0",
+              color: uiColors.grey[100],
+            }}
+          >
+            {!isCollapsed && (
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                ml="15px"
+              >
+                <Typography variant="h3" color={uiColors.grey[100]}>
+                  ADMINII
+                </Typography>
+                <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
+                  <MenuOutlinedIcon />
+                </IconButton>
+              </Box>
+            )}
+          </MenuItem>
+          
+          {/* USER */}
+          {!isCollapsed && (
+            <Box mb="25px">
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <img 
+                  alt="profile-user"
+                  width="100px"
+                  height="100px"
+                  src={`../../assets/user.png`}
+                  style={{ cursor: "pointer", borderRadius: "50%"}}
+                />
+              </Box>
+              <Box textAlign="center">
+                <Typography
+                  variant="h2"
+                  color={uiColors.grey[100]}
+                  fontWeight="bold"
+                  sx={{ m: "10px 0 0 0" }}
+                >
+                  Norm Desk
+                </Typography>
+                <Typography
+                  variant="h5"
+                  color={uiColors.greenAccent[500]}
+                >
+                  Admin
+                </Typography>
+              </Box>
+            </Box>
+          )}
+          {/* 
+            MENU ITEMS 
+            See Item created at the top of filt to understand this portion
+          */}
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+            <Item 
+              title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Typography
+              variant="h6"
+              color={uiColors.grey[300]}
+              sx={{ m: "15px 0 5px 20px"}}
+            >
+              Data
+            </Typography>
+            <Item 
+              title="Manage Team"
+              to="/team"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="Contacts Information"
+              to="/contacts"
+              icon={<ContactsOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="Invoices Balances"
+              to="/invoices"
+              icon={<ReceiptOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Typography
+              variant="h6"
+              color={uiColors.grey[300]}
+              sx={{ m: "15px 0 5px 20px"}}
+            >
+              Pages
+            </Typography>
+            <Item 
+              title="Profile Form"
+              to="/form"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="Calendar"
+              to="/calendar"
+              icon={<CalendarTodayOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="FAQ PAge"
+              to="/faq"
+              icon={<HelpOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Typography
+              variant="h6"
+              color={uiColors.grey[300]}
+              sx={{ m: "15px 0 5px 20px"}}
+            >
+              Charts
+            </Typography>
+            <Item 
+              title="Bar Chart"
+              to="/"
+              icon={<BarChartOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="Pie Chart"
+              to="/"
+              icon={<PieChartOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="Line Chart"
+              to="/line"
+              icon={<TimelineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Item 
+              title="Geography Chart"
+              to="/geography"
+              icon={<MapOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+          </Box>
+        </Menu>
+      </ProSidebar>
+    </Box>
+  )
 }
 
 export default Sidebar;
