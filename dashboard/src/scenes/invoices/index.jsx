@@ -53,9 +53,6 @@ const Invoices = () => {
           "& .MuiCheckbox-root": {
             color: `${uiColors.greenAccent[200]} !important`,
           },
-          "& .MuiCheckbox-root" : {
-            color: `${uiColors.greenAccent[200]} !important`
-          }
         }}
       >
         <DataGrid
