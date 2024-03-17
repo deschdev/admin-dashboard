@@ -93,6 +93,9 @@ const Calendar = () => {
             height="75vh"
             plugins={[
               dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              listPlugin
             ]}
             headerToolbar={{
               left: "prev,next today",
