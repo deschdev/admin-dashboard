@@ -51,7 +51,7 @@ const Calendar = () => {
     <Box m="20px">
       <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
-      <Box display="flex" justifyContent="space-between">
+      <Box mt="20px" display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 20%"
@@ -114,12 +114,12 @@ const Calendar = () => {
               {
                 id: "12315",
                 title: "All-day event",
-                date: "2024-02-08",
+                date: "2024-03-08",
               },
               {
                 id: "5123",
                 title: "Timed event",
-                date: "2022-02-13",
+                date: "2022-03-13",
               },
             ]}
           />
