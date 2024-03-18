@@ -16,12 +16,12 @@ const FAQ = () => {
 
       <Accordion defaultExpanded style={{marginTop: "20px"}}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
-            An Important Question
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
+            An Important Question One
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -29,12 +29,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Two
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -42,12 +42,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Three
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -55,12 +55,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Four
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -68,12 +68,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Five
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -81,12 +81,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Six
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -94,12 +94,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Seven
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -107,12 +107,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
             An Important Question Eight
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -120,12 +120,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
-            An Important Question
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
+            An Important Question Nine
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
@@ -133,12 +133,12 @@ const FAQ = () => {
 
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography colors={uiColors.greenAccent[500]} variant="h5">
-            An Important Question Nine 
+          <Typography color={uiColors.greenAccent[500]} variant="h5">
+            An Important Question Ten
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <Typography colors={uiColors.greenAccent[500]} variant="h5">
+        <Typography>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nam architecto expedita distinctio soluta iusto, vel eveniet maiores fugiat deleniti?
           </Typography>
         </AccordionDetails>
